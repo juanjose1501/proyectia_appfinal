@@ -56,7 +56,7 @@ export default {
                 horas_estimados: this.horas_estimados,
             };
             
-            axios.post("http://127.0.0.1:8000/proyecto/crear", dataIn)
+            axios.post("https://proyectia-api.herokuapp.com/proyecto/crear", dataIn)
             .then(response => {
 
                 alert("Se creó el proyecto con éxito");

@@ -50,7 +50,7 @@ export default {
                
             };
             
-            axios.post("http://127.0.0.1:8000/proyecto/consulta/", dataIn)
+            axios.post("https://proyectia-api.herokuapp.com/proyecto/consulta/", dataIn)
             .then(response => {
                 this.nombre = response.data.nombre,
                 this.empresa= response.data.empresa,
