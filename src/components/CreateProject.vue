@@ -1,17 +1,24 @@
 <template>
-<div align="center" id="CreateProject">
-    nombre:         <input type="text" placeholder= "nombre" v-model="nombre"/><br/>
-    empresa:        <input type="text" placeholder= "empresa" v-model="empresa"/><br/> 
-    descripcion:    <input type="text" placeholder= "descripción" v-model="descripcion"/><br/>
-    fases:          <input type="text" placeholder= "fases" v-model="fases"/><br/>
-    fecha_inicio:   <input type="text" placeholder= "dd/mm/aaaa" v-model="fecha_inicio"/><br/>
-    fecha_fin:      <input type="text" placeholder= "dd/mm/aaaa" v-model="fecha_fin"/><br/>
-    presupuesto:    <input type="number" placeholder= "presupuesto" v-model="presupuesto"/><br/>
-    encargado:      <input type="text" placeholder= "encargado" v-model="encargado"/><br/>
-    num_personas:   <input type="number" placeholder= "num. personas" v-model="num_personas"/><br/>
-    horas_estimados:<input type="number" placeholder= "horas estimadas" v-model="horas_estimados"/><br/>
-    <button v-on:click="crear_proyecto" >Crear Proyecto </button>
-  </div>
+<div align= "center"  id="CreateProject">
+
+        <body>
+            <h2 align="center">NUEVO PROYECTO </h2>
+        <ul align="justify">
+            Nombre:         <input  type="text"  placeholder= "nombre" v-model="nombre"/><br/>
+            Empresa:        <input  type="text" placeholder= "empresa" v-model="empresa"/><br/> 
+            Descripcion:    <input type="text" placeholder= "descripción" v-model="descripcion"/><br/>
+            Fases:          <input type="text" placeholder= "fases" v-model="fases"/><br/>
+            Fecha_inicio:   <input type="text" placeholder= "dd/mm/aaaa" v-model="fecha_inicio"/><br/>
+            Fecha_fin:      <input type="text" placeholder= "dd/mm/aaaa" v-model="fecha_fin"/><br/>
+            Presupuesto:    <input type="number" placeholder= "presupuesto" v-model="presupuesto"/><br/>
+            Encargado:      <input type="text" placeholder= "encargado" v-model="encargado"/><br/>
+            Num_personas:   <input type="number" placeholder= "num. personas" v-model="num_personas"/><br/>
+            Horas_estimadas:<input type="number" placeholder= "horas estimadas" v-model="horas_estimados"/><br/>
+            <button style="position: absolute;top: 120%;left:44%" v-on:click="crear_proyecto" >Crear Proyecto </button>
+        </ul> 
+        </body> 
+    </div>
+    
     
 </template>
 
@@ -65,3 +72,40 @@ export default {
     
 }
 </script>
+
+<style>
+
+    #CreateProject{
+        width: 100%;
+        height: 0%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family:'Courier New', monospace;
+        
+    }
+
+    #CreateProject h2{
+        font-family:'Courier New', monospace;
+        font-size: 32px;
+        color: #f4f6f8;
+    }
+
+    #CreateProject ul button{
+        font-family:'Courier New', monospace;
+        font-size: 19px;
+        color: #f4f6f8;
+        background-color: #283747;
+        border-radius: 6px;
+        align-content:"center"
+        
+    
+    }
+
+    #CreateProject ul button:hover{
+      background-color: #a7a8aa;
+      color: white;
+    }
+
+</style>

@@ -6,7 +6,6 @@
     
     <nav>
       <button v-on:click="createProject" v-if="is_auth" >Crear Proyecto </button>
-      <button v-on:click="getProject" v-if="is_auth" >Consultar </button>
       <button v-on:click="getData">Consulta Tu Proyecto </button>
     </nav>
     
@@ -39,12 +38,6 @@ export default {
     }
   },
   methods: {
-  getProject: function(){
-    if(this.$route.name != "consulta"){
-      let nombre = localStorage.getItem("current_nombre")
-      this.$router.push({ name:"consulta",params:{nombre:nombre}})
-      }
-    },
     
      createProject: function(){
      if(this.$route.name != "crear"){

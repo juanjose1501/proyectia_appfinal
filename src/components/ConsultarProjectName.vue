@@ -1,12 +1,13 @@
 <template>
     <div id="ConsultarProjectName">
-        <div align="center" id="CreateProject">
-    nombre:         <input type="text" placeholder= "nombre" v-model="nombre"/><br/>
-    empresa:        <input type="text" placeholder= "empresa" v-model="empresa"/><br/>
-    <button v-on:click="get_datos" >Consultar </button> 
-        <body>
-            <h2 align="center">{{nombre}}</h2>
-        <ul>
+         
+        <body align = "justify">
+                Nombre:         <input type="text" placeholder= "nombre" v-model="nombre"/><br/>
+                Empresa:        <input type="text" placeholder= "empresa" v-model="empresa"/><br/>
+                <button style="position: absolute;top: 125%;left:46%" v-on:click="get_datos" >Consultar </button> 
+            <h2 align="center">Consulta Tu Proyecto</h2>
+        <ul align = "left">
+            <li>Proyecto: <span>{{nombre}} </span> </li>
             <li>Empresa: <span>{{empresa}} </span> </li>
             <li>Descripcion: <span>{{descripcion}}</span></li>
             <li>Fases: <span>{{fases}}</span></li>
@@ -19,7 +20,7 @@
         </ul> 
         </body> 
         </div>
-    </div>
+    
 </template> 
 
 <script>
@@ -73,7 +74,9 @@ export default {
 }
 </script>
 <style>
+   
     #ConsultarProjectName{
+        font-family:'Courier New', monospace;
         width: 100%;
         height: 0%;
         display: flex;
@@ -91,4 +94,21 @@ export default {
         color: rgb(255, 255, 255);
         font-weight: bold;
     }
+    #ConsultarProjectName body button{
+        font-family:'Courier New', monospace;
+        font-size: 19px;
+        color: #f4f6f8;
+        background-color: #283747;
+        border-radius: 6px;
+        align-content:"center"
+    }
+    #ConsultarProjectName Body button:hover{
+        background-color: #a7a8aa;
+        color: white;
+    }
+
+    /*li{
+        display: flex;
+        justify-content: space-between;
+    }*/
 </style>

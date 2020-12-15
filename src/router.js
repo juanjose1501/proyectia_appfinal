@@ -1,5 +1,4 @@
 import vueRouter from 'vue-router'
-import ConsultarProject from './components/ConsultarProject'
 import CreateProject from './components/CreateProject'
 import ConsultarProjectName from './components/ConsultarProjectName' 
 import App from './App'
@@ -14,11 +13,7 @@ const router = new vueRouter({
             component: App
         },
 
-        {
-            path: '/proyecto/consulta/:nombre',
-            name: "consulta",
-            component: ConsultarProject
-        },
+        
         {
             path: '/proyecto/crear',
             name: "crear",
