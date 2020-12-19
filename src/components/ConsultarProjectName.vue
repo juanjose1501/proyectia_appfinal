@@ -2,22 +2,53 @@
     <div id="ConsultarProjectName">
          
         <body align = "justify">
+                
                 Nombre:         <input type="text" placeholder= "nombre" v-model="nombre"/><br/>
                 Empresa:        <input type="text" placeholder= "empresa" v-model="empresa"/><br/>
-                <button style="position: absolute;top: 125%;left:46%" v-on:click="get_datos" >Consultar </button> 
-            <h2 align="center">Consulta Tu Proyecto</h2>
-        <ul align = "left">
-            <li>Proyecto: <span>{{nombre}} </span> </li>
-            <li>Empresa: <span>{{empresa}} </span> </li>
-            <li>Descripcion: <span>{{descripcion}}</span></li>
-            <li>Fases: <span>{{fases}}</span></li>
-            <li>Fecha de Inicio: <span>{{fecha_inicio}}</span></li>
-            <li>Fecha Fin: <span>{{fecha_fin}}</span></li>
-            <li>Presupuesto: <span>{{presupuesto}}</span></li>
-            <li>Encargado: <span>{{encargado}}</span></li>
-            <li>Numero Personas: <span>{{num_personas}}</span></li>
-            <li>Horas Estimadas: <span>{{horas_estimados}}</span></li> 
-        </ul> 
+                <button v-on:click="get_datos" >Consultar </button> 
+                <h2 align="center">Consulta Tu Proyecto</h2>
+       <table id="tabla1">
+                <tr>
+                    <td>Proyecto:</td>
+                    <td><span>{{nombre}} </span></td>
+                </tr>
+                <tr>
+                    <td>Empresa:</td>
+                    <td><span>{{empresa}} </span></td>
+                </tr>
+                <tr>
+                    <td>Descripción:</td>
+                    <td><span>{{descripcion}}</span></td>
+                </tr>
+                <tr>
+                    <td>Fases:</td>
+                    <td><span>{{fases}}</span></td>
+                </tr>
+                <tr>
+                    <td>Fecha de Inicio:</td>
+                    <td><span>{{fecha_inicio}}</span></td>
+                </tr>
+                <tr>
+                    <td>Fecha Fin:</td>
+                    <td><span>{{fecha_fin}}</span></td>
+                </tr>
+                <tr>
+                    <td>Presupuesto:</td>
+                    <td><span>{{presupuesto}}</span></td>
+                </tr>
+                <tr>
+                    <td>Encargado:</td>
+                    <td><span>{{encargado}}</span></td>
+                </tr>
+                <tr>
+                    <td>Número Personas:</td>
+                    <td><span>{{num_personas}}</span></td>
+                </tr>
+                <tr>
+                    <td>Horas Estimadas: &nbsp;&nbsp;&nbsp;</td>
+                    <td><span>{{horas_estimados}}</span></td>
+                </tr>
+            </table>
         </body> 
         </div>
     
@@ -74,15 +105,33 @@ export default {
 }
 </script>
 <style>
-   
     #ConsultarProjectName{
+        height: 100%;
+        padding-top: 0%;
+        padding-bottom: 3%;
+
+    }
+    #tabla1{
+         background-color:  #727b94;
+         padding: 2%;
+         padding-left: 5%;
+         padding-right: 5%;
+         border-radius: 25px;
+    }
+    
+   
+    #ConsultarProjectName body{
+        color: #fffafa;
+        height: 100%;
+        padding-top: 10%;
+        padding-bottom: 10%;
         font-family:'Courier New', monospace;
         width: 100%;
-        height: 0%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-image: url('../assets/fondo4.jpg');
     }
     #ConsultarProjectName h2{
         font-family:'Courier New', monospace;
@@ -106,6 +155,10 @@ export default {
         background-color: #a7a8aa;
         color: white;
     }
+    tr{
+        color: #000000;
+    }
+    
 
     /*li{
         display: flex;

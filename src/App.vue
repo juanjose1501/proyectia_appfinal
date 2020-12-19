@@ -110,7 +110,7 @@ export default {
     border: 1px solid #E5E7E9;
   }
   .main-component{
-    height: 75vh;
+    height: 100%;
     margin: 0%;
     padding: 0%;
     background: #E5E7E9 ;

@@ -3,20 +3,50 @@
 
         <body>
             <h2 align="center">NUEVO PROYECTO </h2>
-        <ul align="justify">
-            Nombre:         <input  type="text"  placeholder= "nombre" v-model="nombre"/><br/>
-            Empresa:        <input  type="text" placeholder= "empresa" v-model="empresa"/><br/> 
-            Descripcion:    <input type="text" placeholder= "descripción" v-model="descripcion"/><br/>
-            Fases:          <input type="text" placeholder= "fases" v-model="fases"/><br/>
-            Fecha_inicio:   <input type="text" placeholder= "dd/mm/aaaa" v-model="fecha_inicio"/><br/>
-            Fecha_fin:      <input type="text" placeholder= "dd/mm/aaaa" v-model="fecha_fin"/><br/>
-            Presupuesto:    <input type="number" placeholder= "presupuesto" v-model="presupuesto"/><br/>
-            Encargado:      <input type="text" placeholder= "encargado" v-model="encargado"/><br/>
-            Num_personas:   <input type="number" placeholder= "num. personas" v-model="num_personas"/><br/>
-            Horas_estimadas:<input type="number" placeholder= "horas estimadas" v-model="horas_estimados"/><br/>
-            <button style="position: absolute;top: 120%;left:44%" v-on:click="crear_proyecto" >Crear Proyecto </button>
-        </ul> 
+        <table id="tabla2">
+                <tr>
+                    <td>Nombre:</td>
+                    <td><input  type="text"  placeholder= "nombre" v-model="nombre"/></td>
+                </tr>
+                <tr>
+                    <td>Empresa:</td>
+                    <td><input  type="text" placeholder= "empresa" v-model="empresa"/></td>
+                </tr>
+                <tr>
+                    <td>Descripcion:</td>
+                    <td><input type="text" placeholder= "descripción" v-model="descripcion"/></td>
+                </tr>
+                <tr>
+                    <td>Fases:</td>
+                    <td><input type="text" placeholder= "fases" v-model="fases"/></td>
+                </tr>
+                <tr>
+                    <td>Fecha de Inicio:</td>
+                    <td><input type="text" placeholder= "dd/mm/aaaa" v-model="fecha_inicio"/></td>
+                </tr>
+                <tr>
+                    <td>Fecha Fin:</td>
+                    <td><input type="text" placeholder= "dd/mm/aaaa" v-model="fecha_fin"/></td>
+                </tr>
+                <tr>
+                    <td>Presupuesto:</td>
+                    <td><input type="number" placeholder= "presupuesto" v-model="presupuesto"/></td>
+                </tr>
+                <tr>
+                    <td>Encargado:</td>
+                    <td><input type="text" placeholder= "encargado" v-model="encargado"/></td>
+                </tr>
+                <tr>
+                    <td>Numero Personas:</td>
+                    <td><input type="number" placeholder= "num. personas" v-model="num_personas"/></td>
+                </tr>
+                <tr>
+                    <td>Horas Estimadas: &nbsp;&nbsp;&nbsp;</td>
+                    <td><input type="number" placeholder= "horas estimadas" v-model="horas_estimados"/></td>
+                </tr>
+            </table>
         </body> 
+        <button id="botoncrear" v-on:click="crear_proyecto" >Crear Proyecto </button>
     </div>
     
     
@@ -74,10 +104,23 @@ export default {
 </script>
 
 <style>
+    #CreateProject body{
+        background-color:  #727b94;
+        padding-bottom: 6%;
+        padding-left: 5%;
+        padding-right: 5%;
+        border-radius: 50px;
+
+    }
+    #tabla2{
+        border: 0px
+    }
 
     #CreateProject{
+        height: 100%;
+        padding-top: 10%;
+        padding-bottom: 10%;
         width: 100%;
-        height: 0%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -92,18 +135,19 @@ export default {
         color: #f4f6f8;
     }
 
-    #CreateProject ul button{
+    #botoncrear{
         font-family:'Courier New', monospace;
         font-size: 19px;
         color: #f4f6f8;
         background-color: #283747;
         border-radius: 6px;
-        align-content:"center"
+        align-content:"center";
+        margin-top: 5%;
         
     
     }
 
-    #CreateProject ul button:hover{
+    #botoncrear:hover{
       background-color: #a7a8aa;
       color: white;
     }

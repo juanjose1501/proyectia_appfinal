@@ -56,7 +56,11 @@ export default {
 </script>
 
 <style>
-
+#Listar{
+    height: 100%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
 #tabla{
     background-color:  #727b94;
 }
@@ -71,7 +75,7 @@ th{
     font-family:'Courier New', monospace;
 
 }
-table, th, td {
+#tabla, th, td {
   border: 1px solid white;
 }
 </style>
