@@ -75,7 +75,7 @@ th{
     font-family:'Courier New', monospace;
 
 }
-#tabla, th, td {
+#tabla th, #tabla td {
   border: 1px solid white;
 }
 </style>
