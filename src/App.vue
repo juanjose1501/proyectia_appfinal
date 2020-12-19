@@ -7,6 +7,7 @@
     <nav>
       <button v-on:click="createProject" v-if="is_auth" >Crear Proyecto </button>
       <button v-on:click="getData">Consulta Tu Proyecto </button>
+      <button v-on:click="getlista">Listado </button>
     </nav>
     
 
@@ -47,6 +48,11 @@ export default {
       getData: function(){
      if(this.$route.name != "consultanombre"){
        this.$router.push({name:"consultanombre"})
+      }   
+     },
+      getlista: function(){
+     if(this.$route.name != "listar"){
+       this.$router.push({name:"listar"})
       }   
      },
   },

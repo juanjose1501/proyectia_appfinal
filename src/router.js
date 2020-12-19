@@ -1,6 +1,7 @@
 import vueRouter from 'vue-router'
 import CreateProject from './components/CreateProject'
-import ConsultarProjectName from './components/ConsultarProjectName' 
+import ConsultarProjectName from './components/ConsultarProjectName'
+import Listar from './components/Listar' 
 import App from './App'
 
 const router = new vueRouter({
@@ -23,6 +24,11 @@ const router = new vueRouter({
             path: '/proyecto/consulta/',
             name: "consultanombre",
             component: ConsultarProjectName
+        },
+        {
+            path: '/proyecto/lista/',
+            name: "listar",
+            component: Listar
         },
     ]
 })
